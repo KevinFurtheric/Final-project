@@ -1,45 +1,65 @@
-# Final-Project
+# Final Project
 
-Student name: Kevin Furtheric Victor
-Student number: 8915595
-Date: 2024/07/19
+## Student Information
 
-Technology stack
-Frontend: ReactJS
-Backend: NodeJS with express
-Database: MongoDB (Atlas)
+- **Name**: Kevin Furtheric Victor
+- **Student Number**: 8915595
+- **Date**: 2024/07/19
 
-Database schema (MongoDB)
+## Technology Stack
 
-Products schema:
+- **Frontend**: ReactJS
+- **Backend**: NodeJS with Express
+- **Database**: MongoDB (Atlas)
 
-- product_name : String
-- price : Number
-- description : String
-- image : String
-- category : String
-- Stock : Number
+## Database Schema
 
-Users schema
+### Products Schema
 
-- username : String (Primary key)
-- password : String
-- email : String
-- role : String (customer or admin)
+- `product_name`: String
+- `price`: Number
+- `description`: String
+- `image`: String
+- `category`: String
+- `Stock`: Number
 
-Orders schema
+### Users Schema
 
-- order_id : ObjectID
-- username : String (Foreign key)
-- product_name : String
-- total_amount : Number
-- status : String ("Pending","completed" etc.)
+- `username`: String (Primary key)
+- `password`: String
+- `email`: String
+- `role`: String (customer or admin)
 
-Project setup :
+### Orders Schema
 
-- Initialized the project by creating the repository in github and cloned to the local machine.
+- `order_id`: ObjectID
+- `username`: String (Foreign key)
+- `product_name`: String
+- `total_amount`: Number
+- `status`: String ("Pending", "completed", etc.)
 
-Notes:
+## Project Setup
+
+1. **Initialize Your Project**
+
+   - Created the repository on GitHub and cloned it to the local machine.
+
+2. **Set Up Your Chosen Frontend Framework**
+
+   - Initialized the ReactJS frontend framework.
+
+3. **Set Up Your Chosen Backend Framework**
+
+   - Initialized the NodeJS with Express backend framework.
+
+4. **Configure Your Database**
+   - Configured MongoDB (Atlas) with the appropriate schema.
 
 - The project is set up using Git and GitHub for version control.
-- After the approval from the professor, I will start implementing user interfaces for product listing, shopping cart and checkout.
+
+## Next Steps
+
+- To create the User interfaces of :
+  - Product listing
+  - Shopping cart
+  - Checkout
