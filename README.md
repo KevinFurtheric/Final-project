@@ -30,13 +30,10 @@
 - `email`: String
 - `role`: String (customer or admin)
 
-### Orders Schema
+### category Schema
 
-- `order_id`: ObjectID
-- `username`: String (Foreign key)
-- `product_name`: String
-- `total_amount`: Number
-- `status`: String ("Pending", "completed", etc.)
+- `name` : String
+- `description` : String
 
 ## Project Setup
 
