@@ -1,20 +1,57 @@
-const Product = require("../models/ProductSchema");
+const Product = require("../models/Product");
 
-exports.createProduct = async (req, res) => {
+const getProducts = async (req, res) => {
   try {
-    const newProduct = new Product(req.body);
-    const savedProduct = await newProduct.save();
-    res.status(201).json(savedProduct);
+    const products = await Product.find({});
+    res.json(products);
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    res.status(500).json({ message: error.message });
   }
 };
 
-exports.getAllProducts = async (req, res) => {
+const createProduct = async (req, res) => {
   try {
-    const products = await Product.find();
-    res.status(200).json(products);
+    const { product_name, price, description, image, stock, category } =
+      req.body;
+    const product = new Product({
+      product_name,
+      price,
+      description,
+      image,
+      stock,
+      category,
+    });
+    const createdProduct = await product.save();
+    res.status(201).json(createdProduct);
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    res.status(500).json({ message: error.message });
   }
 };
+
+const updateProduct = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { product_name, price, description, image, stock, category } =
+      req.body;
+    const updatedProduct = await Product.findByIdAndUpdate(
+      id,
+      { product_name, price, description, image, stock, category },
+      { new: true }
+    );
+    res.json(updatedProduct);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+const deleteProduct = async (req, res) => {
+  try {
+    const { id } = req.params;
+    await Product.findByIdAndDelete(id);
+    res.json({ message: "Product removed" });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+module.exports = { getProducts, createProduct, updateProduct, deleteProduct };
