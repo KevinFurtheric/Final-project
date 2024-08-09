@@ -21,7 +21,7 @@
 - `description`: String
 - `image`: String
 - `category`: String
-- `Stock`: Number
+- `stock`: Number
 
 ### Users Schema
 
@@ -30,10 +30,11 @@
 - `email`: String
 - `role`: String (customer or admin)
 
-### category Schema
+### Category Schema
 
-- `name` : String
-- `description` : String
+- `name`: String
+- `image`: String
+- `description`: String
 
 ## Project Setup
 
@@ -50,13 +51,14 @@
    - Initialized the NodeJS with Express backend framework.
 
 4. **Configure Your Database**
+
    - Configured MongoDB (Atlas) with the appropriate schema.
 
 - The project is set up using Git and GitHub for version control.
 
 ## Next Steps
 
-- To create the User interfaces of :
-  - Product listing
-  - Shopping cart
+- To create the User Interfaces for:
+  - Product Listing
+  - Shopping Cart
   - Checkout
