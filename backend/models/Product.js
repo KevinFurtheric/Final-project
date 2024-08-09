@@ -1,13 +1,12 @@
-const express = require("express");
-const {
-  getProducts,
-  createProduct,
-  updateProduct,
-  deleteProduct,
-} = require("../controllers/productController");
-const router = express.Router();
+const mongoose = require("mongoose");
 
-router.route("/").get(getProducts).post(createProduct);
-router.route("/:id").put(updateProduct).delete(deleteProduct);
+const productSchema = new mongoose.Schema({
+  product_name: { type: String, required: true },
+  price: { type: Number, required: true },
+  description: { type: String, required: true },
+  image: { type: String, required: true },
+  stock: { type: Number, required: true },
+  category: { type: String, required: true },
+});
 
-module.exports = router;
+module.exports = mongoose.model("Product", productSchema);
