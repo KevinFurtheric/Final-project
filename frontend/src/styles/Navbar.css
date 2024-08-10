@@ -1,0 +1,54 @@
+/* Navbar Container */
+.navbar {
+  background-color: #007bff;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Brand/Title */
+.navbar .navbar-brand a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Navbar Links */
+.navbar .navbar-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar .navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .navbar-links a:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* Logout Button */
+.navbar .navbar-logout {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .navbar-logout:hover {
+  background-color: #0056b3;
+}

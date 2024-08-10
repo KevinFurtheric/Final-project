@@ -56,9 +56,7 @@
 
 - The project is set up using Git and GitHub for version control.
 
-## Next Steps
+5. **AdminLogin**
 
-- To create the User Interfaces for:
-  - Product Listing
-  - Shopping Cart
-  - Checkout
+   - Username: Kevin
+   - Password: 8915595
